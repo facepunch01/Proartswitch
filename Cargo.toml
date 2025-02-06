@@ -1,0 +1,17 @@
+[package]
+name = "proart-switch"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+windows-registry = "0.3"
+tray-icon = "0.19.2"
+trayicon = "0.2.0"
+winit = "0.30.8"
+winreg = "0.55.0"
+[build-dependencies]
+embed-resource = "2.1"
+[profile.release]
+windows = { crate-type = ["bin"], linker-flavor = "link.exe" }
+[package.metadata]
+windows-subsystem = "windows"
